@@ -13,6 +13,10 @@ w_drs = 0.5;
 
 steady;
 
+ramsey_constraints;
+RS_US > 0;
+end;
+
 histval;
  PIE_US(-2) = 2.00;
  PIE_US(-1) = 1.40;
@@ -29,6 +33,11 @@ shocks;
  values -0.3,-0.2,-0.1;
 end;
 
+// treat shocks as unanticipated
+M_.unanticipated_det_shocks = M_.det_shocks;
+M_.det_shocks = [];
+
+// extended path options
 options_.periods = 12;
 options_.periods = 1;
 options_.ep.periods = 100;
@@ -37,12 +46,9 @@ options_.ep.parallel_1 = false;
 options_.ep.stack_solve_algo = 7;
 options_.ep.innovation_distribution = 'calibrated';
 options_.ep.init = 1;
-options_.solve_algo = 10;
-options_.lmmcp.Display = 1;
+options_.ep.solve_algo = 10;
 options_.lmmcp.presteps = 2;
 
-M_.unanticipated_det_shocks = M_.det_shocks;
-M_.det_shocks = [];
 [t,r] = extended_path([],25);
 oo_.endo_simul = r{1};
 

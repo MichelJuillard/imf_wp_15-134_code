@@ -14,7 +14,7 @@ w_drs = 0.5;
 steady;
 
 ramsey_constraints;
-RS_TEMP_US > 0;
+RS_US > 0;
 end;
 
 histval;
@@ -41,8 +41,7 @@ options_.ep.parallel_1 = false;
 options_.ep.stack_solve_algo = 7;
 options_.ep.innovation_distribution = 'calibrated';
 options_.ep.init = 1;
-options_.stack_solve_algo = 7;
-options_.solve_algo = 10;
+options_.ep.solve_algo = 10;
 options_.lmmcp.presteps = 2;
 
 M_.unanticipated_det_shocks = M_.det_shocks;

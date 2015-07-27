@@ -26,10 +26,10 @@ zetay_US = 0.000000;
 zetayy_US = 0.8;0.500000;
 zetars_US = 0.390000;
 
-rs_floor_US = 0.125000;
+rs_floor_US = 0.0;
 rs_delta = 0.00001;
 
-rho_US = 0.150000;
+rho_US = 0.050000;
 rr_bar_ss_US = 1.880000;
 lrrw01_US = 0.100000;
 lrrw04_US = 0.350000;
@@ -42,25 +42,6 @@ pietar_ss_US = 2.00000;
 
 ss_tprem40 = 1.0;
 
-growth_ss_US = 2.5;
-tau_US = 0.027400;
-kappa2_US = 0;0.100000;
-
-
-// credibility parameters
-//pie_init = 0.9;
-pie_init = 10;
-bias_level = 0.6;1.45;
-//bias_delta = 0.8;
-bias_delta = 1.2;
-wpie4 = 0.5;
-wsig = 0.25;
-//wsig = 0.30;
-
 // objective function parameters
 disc = 1;
-
-// to make it equivalent to ZIF experiments
-rho_US = 0.05;
-rs_floor_US = 0.0;
 

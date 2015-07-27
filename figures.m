@@ -56,6 +56,7 @@ legend('IFB','TAY','DM1','DM2','Location','SouthEast')
 subplot(2,2,4)
 for i=1:4
     if i == 4
+        % changing weight on output gap for DM2
         w_y = 0.5;
     end
     Loss(i,:) = w_pie*(Y{i}(i_pie4(i),:)-pietar).^2 + w_y*Y{i}(i_y(i),:).^2 ...
